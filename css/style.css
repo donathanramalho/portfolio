@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
 
 html {
     font-family: "Roboto", sans-serif;
@@ -6,33 +13,173 @@ html {
     overflow-y: auto;
 }
 
-header {
-    height: 100vw;
+
+
+
+/* titulo */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.7em;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+}
+
+
+/* Home */
+.navbar {
+    padding: 15px;
+    position: sticky;
+    top: 0;
     width: 100vw;
+    z-index: 200;
+}
+
+.home {
+    height: 100vh;
+    width: 90vw;
+    margin: 15vh 5vw;
+}
+
+.home-hidden-img {
+    display: none;
+}
+
+.home img {
+    margin: 50px;
+    width: 90%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-photo {
+    display: flex;
+    justify-content: center;
+}
+
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+}
+
+.home-name p:nth-child(2) {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 5px 0 25px 0
+}
+
+.home-name p:nth-child(3) {
+    font-size: 30px;
 }
 
 
 
+.home-description {
+    margin: 10px;
+    font-size: 18px;
+    color: #4e4e4e;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.home-description p {
+    margin: 20px 0;
+}
+
+.home-buttons {
+    display: flex;
+}
+
+.home-buttons a {
+    color: #000;
+    font-weight: bold;
+    border: 1px solid black;
+    margin: 15px;
+    width: 150px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-buttons a:hover {
+    background-color: #3a3a3a;
+    border: 1px solid rgb(216, 216, 216);
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .home-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-hidden-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    .home-hidden-img img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home {
+        width: 90vw;
+        margin: 80px 5vw 0 5vw;
+    }
+
+    .home-buttons {
+        justify-content: space-evenly;
+        margin: 5px 0 50px 0;
+    }
+
+    .home-photo {
+        display: none;
+    }
+
+}
 
 
 
+/* About */
+
+/* Skills */
 
 
 
-
-
+/* Projects */
 .row {
     --bs-gutter-x: 0;
 }
 
-.img {
+.img-project {
     display: flex;
     padding: 0;
     align-items: center;
     justify-content: center;
 }
 
-.text {
+.card-content {
     display: grid;
     justify-items: center;
 }
@@ -47,7 +194,7 @@ header {
 .custom-card {
     max-width: 1200px;
     width: 75%;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
     margin: 50px auto;
@@ -114,9 +261,6 @@ header {
     margin: 0 10px 0 0;
 }
 
-
-
-
 .project-1 {
     transform: translateX(-100%);
 }
@@ -153,3 +297,8 @@ header {
         width: 90%;
     }
 }
+
+
+/* Translate to english */
+
+
