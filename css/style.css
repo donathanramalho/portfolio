@@ -4,6 +4,21 @@ html {
     font-family: "Roboto", sans-serif;
 }
 
+header {
+    height: 100vw;
+    width: 100vw;
+}
+
+
+
+
+
+
+
+
+
+
+
 .row {
     --bs-gutter-x: 0;
 }
@@ -22,18 +37,18 @@ html {
 
 .img-fluid {
     border-radius: 20px;
-    max-width: 400px;
+    max-width: 450px;
     width: 90%;
     margin: 8px 0 30px 0;
 }
 
 .custom-card {
     max-width: 1200px;
-    width: 95%;
+    width: 75%;
     background-color: #f5f5f5;
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
-    margin: 30px auto;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -66,13 +81,13 @@ html {
     font-weight: bold;
 }
 
-.buttons {
+.project-buttons {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-.buttons button {
+.project-buttons button {
     margin: 10px;
     color: #000000;
     font-weight: bold;
@@ -87,7 +102,52 @@ html {
     align-items: center;
 }
 
-.buttons button img {
+.project-buttons button:hover {
+    background-color: #dcdcdc;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.project-buttons button img {
     height: 20px;
     margin: 0 10px 0 0;
+}
+
+
+
+
+.project-1 {
+    transform: translateX(-100%);
+}
+.project-2 {
+    transform: translateX(100%);
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+}
+
+.project-1.show {
+    transform: translateX(-13%);
+}
+
+.project-2.show {
+    transform: translateX(13%);
+}
+
+@media screen and (max-width: 1024px) {
+    .project-1.show, .project-2.show {
+        transform: translateX(0);
+    }
+
+    .custom-card {
+        width: 90%;
+    }
 }
