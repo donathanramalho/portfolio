@@ -4,7 +4,10 @@
 * {
     margin: 0;
     padding: 0;
-    
+}
+
+* a {
+    text-decoration: none;
 }
 
 html {
@@ -16,7 +19,93 @@ html {
 
 
 
-/* titulo */
+/* Language */
+.language-selected {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 30px;
+}
+
+.language-selected:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/flags/brazil.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-top: 9px;
+}
+
+.language ul {
+    position: absolute;
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    margin-top: 165px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.language ul li {
+    list-style: none;
+}
+
+.language ul li a {
+    display: block;
+    color: #252525;
+    padding: 5px 10px;
+    font: none;
+}
+
+.language ul li:hover {
+    background-color: #f8f8f8;
+}
+
+.language ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+a.br:before {
+    background-image: url('../img/flags/brazil.png');
+}
+
+a.en:before {
+    background-image: url('../img/flags/us.png');
+}
+
+a.de:before {
+    background-image: url('../img/flags/germany.png');
+}
+
+.language:hover ul {
+    display: block;
+}
+
+
+
+
+.section {
+
+}
+
+
+
+
+
+
+/* title */
 .title {
     display: flex;
     justify-content: center;
@@ -36,12 +125,40 @@ html {
     top: 0;
     width: 100vw;
     z-index: 200;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    background-color: rgb(0, 0, 20) !important; 
+}
+
+.navbar-toggler {
+    background-color: #fff
+}
+
+.navbar-nav {
+    --bs-navbar-active-color: #fff;
+    --bs-nav-link-color: #fff;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 0 30px;
+}
+
+.navbar-brand {
+    color: #fff;
 }
 
 .home {
-    height: 100vh;
-    width: 90vw;
-    margin: 15vh 5vw;
+    height: calc(100vh - 69px);
+    background-image: url('../ceu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(0, 0, 20);
 }
 
 .home-hidden-img {
@@ -61,6 +178,7 @@ html {
 .home-photo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -73,6 +191,7 @@ html {
 .home-name {
     font-family: "Poppins", sans-serif;
     font-size: 40px;
+    color: #fff;
 }
 
 .home-name p:nth-child(2) {
@@ -90,7 +209,7 @@ html {
 .home-description {
     margin: 10px;
     font-size: 18px;
-    color: #4e4e4e;
+    color: #aeaeae;
     text-align: justify;
     line-height: 1.5em;
 }
@@ -104,9 +223,9 @@ html {
 }
 
 .home-buttons a {
-    color: #000;
+    color: #ffffff;
     font-weight: bold;
-    border: 1px solid black;
+    border: 1px solid rgb(216, 216, 216);
     margin: 15px;
     width: 150px;
     height: 40px;
@@ -138,14 +257,13 @@ html {
         object-fit: cover;
     }
 
+    .home {
+        height: 100%;
+    }
+
     .home-hidden-img img {
         width: 220px;
         height: 220px;
-    }
-
-    .home {
-        width: 90vw;
-        margin: 80px 5vw 0 5vw;
     }
 
     .home-buttons {
