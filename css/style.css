@@ -19,6 +19,31 @@ html {
 
 
 
+/* Scroll */
+/* Estilizando a barra de rolagem geral */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Estilizando a faixa da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da faixa */
+}
+
+/* Estilizando o manipulador da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do manipulador */
+}
+
+/* Estilizando o manipulador da barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do manipulador ao passar o mouse */
+}
+
+
+
+
+
 /* Language */
 .language-selected {
     display: flex;
@@ -62,7 +87,7 @@ html {
 }
 
 .language ul li:hover {
-    background-color: #f8f8f8;
+    background-color: #f0f0f0;
 }
 
 .language ul li a:before {
@@ -95,10 +120,6 @@ a.de:before {
 
 
 
-
-.section {
-
-}
 
 
 
@@ -137,6 +158,9 @@ a.de:before {
 .navbar-nav {
     --bs-navbar-active-color: #fff;
     --bs-nav-link-color: #fff;
+
+    --bs-nav-link-hover-color: #fff;
+    --bs-nav-link-disabled-color: #fff;
 }
 
 .nav-item {
@@ -149,7 +173,7 @@ a.de:before {
     margin: 0 30px;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand:hover, .navbar-brand:focus {
     color: #fff;
 }
 
@@ -166,7 +190,6 @@ a.de:before {
 }
 
 .home img {
-    margin: 50px;
     width: 90%;
     max-width: 300px;
     max-height: 300px;
@@ -177,7 +200,8 @@ a.de:before {
 
 .home-photo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -185,6 +209,7 @@ a.de:before {
 .home-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
